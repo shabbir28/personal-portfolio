@@ -4,10 +4,10 @@ import { Briefcase, Code, User, Download } from "lucide-react";
 const AboutSection = () => {
   const handleCVDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; 
-    link.download = 'Shabbir_CV.pdf'; 
+    link.href = '/Shabbir.CV.pdf';
+    link.download = 'Shabbir.CV.pdf';
     link.target = '_blank';
-    
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
