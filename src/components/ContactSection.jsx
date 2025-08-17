@@ -22,10 +22,10 @@ export const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_m286w16", // ✅ Service ID
-        "template_gcyg76k", // ✅ Template ID
+        "service_m286w16",
+        "template_gcyg76k",
         e.target,
-        "Qe-GF0OxVEl18mm0O" // ✅ Public Key
+        "Qe-GF0OxVEl18mm0O"
       )
       .then(
         () => {
@@ -51,23 +51,26 @@ export const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+      <div className="container mx-auto max-w-6xl">
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+          Get In{" "}
+          <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+            Touch
+          </span>
         </h2>
-
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+        Open to collaborations and new projects, with a focus on creating innovative and meaningful solutions.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Side Contact Info */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+          {/* Left Side */}
+          <div className="space-y-10">
+            <h3 className="text-2xl font-semibold">Contact Information</h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
+            <div className="space-y-6">
+              {/* Email */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-card shadow-sm hover:shadow-md transition">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
@@ -82,7 +85,8 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              {/* Phone */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-card shadow-sm hover:shadow-md transition">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
@@ -97,79 +101,86 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              {/* Location */}
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-card shadow-sm hover:shadow-md transition">
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground hover:text-primary transition-colors">
-                    Islamabad, Pakistan
-                  </p>
+                  <p className="text-muted-foreground">Islamabad, Pakistan</p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+            {/* Social Links */}
+            <div className="pt-10 text-center">
+              <h4 className="font-medium text-lg mb-6">Connect With Me</h4>
+              <div className="flex justify-center gap-6">
                 <a
                   href="http://www.linkedin.com/in/m-shabbir-ahmed-a0649928a"
                   target="_blank"
                   rel="noreferrer"
+                  className="p-4 rounded-full bg-primary/10 hover:bg-primary/20 transition transform hover:scale-110"
                 >
-                  <Linkedin />
+                  <Linkedin className="w-7 h-7 text-primary" />
                 </a>
                 <a
                   href="https://github.com/shabbir28"
                   target="_blank"
                   rel="noreferrer"
+                  className="p-4 rounded-full bg-primary/10 hover:bg-primary/20 transition transform hover:scale-110"
                 >
-                  <Github />
+                  <Github className="w-7 h-7 text-primary" />
                 </a>
                 <a
                   href="https://www.instagram.com/m_shabbirrahmed"
                   target="_blank"
                   rel="noreferrer"
+                  className="p-4 rounded-full bg-primary/10 hover:bg-primary/20 transition transform hover:scale-110"
                 >
-                  <Instagram />
+                  <Instagram className="w-7 h-7 text-primary" />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right Side Contact Form */}
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          {/* Right Side - Form */}
+          <div className="bg-card p-8 rounded-xl shadow-md hover:shadow-lg transition">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-
             <form className="space-y-6" onSubmit={handleSubmit}>
-              {/* Hidden Title Field for Subject */}
               <input type="hidden" name="title" value="Contact Form" />
 
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  name="name" // ✅ matches template
+                  name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Shabbir Ahmed..."
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  name="email" // ✅ matches template
+                  name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
                 />
               </div>
@@ -183,9 +194,10 @@ export const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
-                  name="message" // ✅ matches template
+                  name="message"
+                  rows="4"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
