@@ -22,10 +22,10 @@ export const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_8mvnyce", // ✅ Service ID
+        "service_m286w16", // ✅ Service ID
         "template_gcyg76k", // ✅ Template ID
         e.target,
-        "hMtBlQLrOn6i1nQX9" // ✅ Public Key
+        "Qe-GF0OxVEl18mm0O" // ✅ Public Key
       )
       .then(
         () => {
@@ -143,17 +143,17 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Hidden Title Field for Subject */}
+              <input type="hidden" name="title" value="Contact Form" />
+
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  name="user_name" // ✅ Must match template variable
+                  name="name" // ✅ matches template
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Shabbir Ahmed..."
@@ -161,16 +161,13 @@ export const ContactSection = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  name="user_email" // ✅ Must match template variable
+                  name="email" // ✅ matches template
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
@@ -186,7 +183,7 @@ export const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
-                  name="message" // ✅ Must match template variable
+                  name="message" // ✅ matches template
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
