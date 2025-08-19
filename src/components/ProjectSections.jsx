@@ -38,11 +38,12 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900 dark:text-white">
           Featured <span className="text-primary">Projects</span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           Some of my highlighted work — designed with precision, performance, and
           modern UI trends.
         </p>
@@ -52,13 +53,17 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              whileHover={{ y: -8 }} // Hover = thoda uper
-              whileTap={{ scale: 0.97 }} // Click = press effect
+              whileHover={{ y: -8 }}
+              whileTap={{ y: -4, scale: 0.98 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="relative rounded-2xl p-[2px] bg-gradient-to-br from-primary/40 via-primary/20 to-transparent"
             >
-              <div className="rounded-2xl h-full flex flex-col bg-white/90 dark:bg-neutral-900/70 backdrop-blur border border-gray-200 dark:border-white/10 shadow-md overflow-hidden relative group">
-                
+              <div
+                className="rounded-2xl h-full flex flex-col 
+                bg-white dark:bg-neutral-900
+                backdrop-blur border border-gray-200 dark:border-white/10 
+                shadow-lg overflow-hidden relative group"
+              >
                 {/* Image */}
                 <a
                   href={project.demoUrl}
@@ -69,12 +74,21 @@ export const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-active:scale-105"
                   />
-                  
-                  {/* Overlay dark on hover */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <span className="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+
+                  {/* Overlay with Title */}
+                  <div
+                    className="absolute inset-0 bg-black/60 opacity-0 
+                      group-hover:opacity-100 group-active:opacity-100 
+                      transition-opacity duration-500 flex items-center justify-center"
+                  >
+                    <span
+                      className="text-white text-xl font-semibold 
+                        opacity-0 group-hover:opacity-100 group-active:opacity-100 
+                        transform translate-y-4 group-hover:translate-y-0 group-active:translate-y-0 
+                        transition-all duration-500"
+                    >
                       {project.title}
                     </span>
                   </div>
@@ -85,7 +99,9 @@ export const ProjectsSection = () => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute top-3 right-3 z-10 p-2 rounded-full bg-white/80 dark:bg-neutral-800/70 shadow hover:scale-110 transition-transform"
+                  className="absolute top-3 right-3 z-10 p-2 rounded-full 
+                      bg-white/80 dark:bg-neutral-800/70 shadow 
+                      hover:scale-110 active:scale-95 transition-transform"
                 >
                   <Github size={18} className="text-primary" />
                 </a>
@@ -97,7 +113,9 @@ export const ProjectsSection = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                        className="px-2 py-1 text-xs font-medium rounded-full 
+                          bg-gray-100 text-gray-700 
+                          dark:bg-neutral-700 dark:text-gray-100"
                       >
                         {tag}
                       </span>
@@ -105,7 +123,7 @@ export const ProjectsSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm flex-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 flex-1">
                     {project.description}
                   </p>
 
@@ -115,7 +133,8 @@ export const ProjectsSection = () => {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-2 text-sm font-medium text-center rounded-lg border bg-primary text-white hover:bg-primary/90 transition-colors"
+                      className="flex-1 py-2 text-sm font-medium text-center rounded-lg 
+                        bg-primary text-white hover:bg-primary/90 active:scale-95 transition-all"
                     >
                       <ExternalLink size={16} className="inline mr-1" />
                       Demo
@@ -124,7 +143,10 @@ export const ProjectsSection = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-2 text-sm font-medium text-center rounded-lg border bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors"
+                      className="flex-1 py-2 text-sm font-medium text-center rounded-lg 
+                        bg-gray-200 text-gray-800 hover:bg-gray-300 
+                        dark:bg-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-600 
+                        active:scale-95 transition-all"
                     >
                       <Github size={16} className="inline mr-1" />
                       Code
@@ -142,7 +164,9 @@ export const ProjectsSection = () => {
             href="https://github.com/shabbir28"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 rounded-xl bg-gradient-to-r from-primary to-purple-600 text-white font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all inline-block"
+            className="px-8 py-3 rounded-xl bg-gradient-to-r from-primary to-purple-600 
+              text-white font-medium shadow-md hover:shadow-xl hover:scale-105 active:scale-95 
+              transition-all inline-block"
           >
             Visit My GitHub
           </a>

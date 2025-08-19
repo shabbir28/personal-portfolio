@@ -60,6 +60,7 @@ export const ContactSection = () => {
           </span>
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+        
         Open to collaborations and new projects, with a focus on creating innovative and meaningful solutions.
         </p>
 
