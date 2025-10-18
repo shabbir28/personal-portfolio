@@ -24,13 +24,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Converso",
     description:
-      "A scalable e-commerce platform with authentication and Stripe payments.",
+      "AI-Powered LMS SaaS Platform for creating and managing online learning",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "https://example.com/demo-3",
-    githubUrl: "https://github.com/shabbir28/ecommerce",
+    tags: ["Next.js", "tailwind.css", "shadcn/ui", "supabase"],
+    demoUrl: "https://saas-app-gamma-dun.vercel.app/",
+    githubUrl: "https://github.com/shabbir28/saas-app ",
   },
 ];
 
@@ -39,7 +39,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900 dark:text-primary">
           Featured <span className="text-primary">Projects</span>
         </h2>
 
@@ -94,7 +94,6 @@ export const ProjectsSection = () => {
                   </div>
                 </a>
 
-                {/* Floating GitHub badge */}
                 <a
                   href={project.githubUrl}
                   target="_blank"
