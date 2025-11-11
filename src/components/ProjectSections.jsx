@@ -8,9 +8,9 @@ const projects = [
     title: "Project Sync",
     description:
       "A full stack project management system built with React, Node.js, Express, and Tailwind.",
-    image: "/projects/project1.png",
+    image: "/projects/  project sync.png",
     tags: ["React", "TailwindCSS", "Node.js", "MongoDB"],
-    demoUrl: "https://example.com/demo-1",
+    demoUrl: "https://project-sync-one.vercel.app/",
     githubUrl: "https://github.com/shabbir28/project-sync",
   },
   {
@@ -19,15 +19,15 @@ const projects = [
     description: "A modern, sleek landing page built with React and Tailwind.",
     image: "/projects/project2.png",
     tags: ["React", "Tailwind", "Framer Motion"],
-    demoUrl: "https://example.com/demo-2",
-    githubUrl: "https://github.com/shabbir28/awards-ui",
+    demoUrl: "https://modern-ui-sepia.vercel.app/",
+    githubUrl: "https://github.com/shabbir28/modern-ui",
   },
   {
     id: 3,
     title: "Converso",
     description:
       "AI-Powered LMS SaaS Platform for creating and managing online learning",
-    image: "/projects/project3.png",
+    image: "/projects/converso.png",
     tags: ["Next.js", "tailwind.css", "shadcn/ui", "supabase"],
     demoUrl: "https://saas-app-gamma-dun.vercel.app/",
     githubUrl: "https://github.com/shabbir28/saas-app ",
