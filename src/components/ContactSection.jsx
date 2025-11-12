@@ -119,7 +119,7 @@ export const ContactSection = () => {
               <h4 className="font-medium text-lg mb-6">Connect With Me</h4>
               <div className="flex justify-center gap-6">
                 <a
-                  href="http://www.linkedin.com/in/m-shabbir-ahmed-a0649928a"
+                  href="www.linkedin.com/in/muhammad-shabbir-ahmed-a0649928a"
                   target="_blank"
                   rel="noreferrer"
                   className="p-4 rounded-full bg-primary/10 hover:bg-primary/20 transition transform hover:scale-110"
