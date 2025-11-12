@@ -8,7 +8,7 @@ const projects = [
     title: "Project Sync",
     description:
       "A full stack project management system built with React, Node.js, Express, and Tailwind.",
-    image: "/projects/  project sync.png",
+    image: "/projects/project sync.png",
     tags: ["React", "TailwindCSS", "Node.js", "MongoDB"],
     demoUrl: "https://project-sync-one.vercel.app/",
     githubUrl: "https://github.com/shabbir28/project-sync",
